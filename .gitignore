@@ -1,0 +1,6 @@
+*.pyc
+.coverage
+htmlcov/
+venv/
+boxoff.sublime-project
+boxoff.sublime-workspace
