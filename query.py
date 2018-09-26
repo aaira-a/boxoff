@@ -13,3 +13,12 @@ def query_endpoint(endpoint=QUERY_URI):
         return response.json()
     except:
         return "error"
+
+
+def parse_response(response_json):
+    match = False
+    for date in response_json["Data"]:
+        for session in date["Times"]:
+            if session["SessionAttributes"].lower() == "KECIL".lower():
+                match = True
+    return match
